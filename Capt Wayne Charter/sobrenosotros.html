@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre Nosotros | Capt. Wayne Charters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-image: url('https://media.istockphoto.com/id/184600243/photo/coral-reef-roatan-honduras.jpg?s=612x612&w=0&k=20&c=-tvn8IxjLPQnW-NWD2cqKaR7ZXRY0X2OFh2cIvfiqh4=');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #1f2937;
+    }
+    .logo-text {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #facc15;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    .bg-blur {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="absolute top-0 left-0 w-full z-50">
+    <nav class="flex flex-wrap justify-between items-center px-6 py-4 bg-gradient-to-b from-black/70 to-transparent text-white">
+      <div class="logo-text">Capt. Wayne Charters</div>
+      <ul class="hidden md:flex space-x-6 font-medium text-base items-center">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+        <li><a href="tours.html" class="hover:text-yellow-300 transition">Tours</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-300 transition">Galería</a></li>
+        <li><a href="mapa.html" class="hover:text-yellow-300 transition">Mapa</a></li>
+        <li><a href="sobrenosotros.html" class="hover:text-yellow-300 transition">Sobre Nosotros</a></li>
+        <li><a href="calendario.html" class="hover:text-yellow-300 transition">Calendario</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-300 transition">Contacto</a></li>
+        <li>
+          <a href="carrito.html" class="relative flex items-center hover:text-yellow-400 transition">
+            🛒 <span class="ml-1">Carrito</span>
+            <span id="cart-count" class="ml-1 bg-yellow-400 text-xs text-black px-2 py-0.5 rounded-full">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Header Section -->
+  <section class="bg-blur mt-32 mx-4 md:mx-20 text-center shadow-md">
+    <h1 class="text-4xl font-extrabold tracking-tight text-teal-800">Sobre Nosotros</h1>
+    <p class="text-lg mt-2 text-gray-700 max-w-2xl mx-auto">Conoce la historia, misión y equipo detrás de Capt. Wayne Charters</p>
+  </section>
+
+  <!-- Nuestra Historia -->
+  <section class="py-16 px-6 md:px-20">
+    <div class="bg-blur mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold text-teal-700 mb-6 text-center">Nuestra Historia</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Capt. Wayne Charters nació hace aproximadamente 20 años, fruto de la pasión de nuestro fundador Allan Mann por el mar y su deseo de emprender. Comenzó con un pequeño bote llamado Camarona, ofreciendo servicio de taxi acuático. Luego amplió su visión y añadió tours, pesca, snorkeling y más. Gracias a su dedicación y reputación, se convirtió en una referencia entre los turistas que visitan la isla. Hoy somos una empresa familiar consolidada, con un equipo profesional en mar y tierra.
+      </p>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section class="py-16 px-6 md:px-20">
+    <div class="bg-blur max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-2xl font-semibold text-teal-700 mb-4">Nuestra Misión</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Brindar experiencias turísticas seguras y sostenibles que conecten a nuestros visitantes con la biodiversidad de Roatán,
+          promoviendo el respeto y la conservación de los ecosistemas marinos y costeros.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold text-teal-700 mb-4">Nuestra Visión</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Ser la compañía líder en ecoturismo marino en la región, reconocida por nuestro compromiso con la sustentabilidad,
+          la innovación en actividades acuáticas y la excelencia en atención al cliente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestro Equipo -->
+  <section class="py-16 px-6 md:px-20">
+    <div class="bg-blur">
+      <h2 class="text-3xl font-bold text-teal-700 mb-8 text-center">Nuestro Equipo</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <img src="fotos/FDEACC65-B7C6-44E7-8500-ECC02A53B03D.jpeg" alt="Capt." class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg" />
+          <h4 class="text-xl font-semibold">Capt. Allan Mann</h4>
+          <p class="text-gray-600">Fundador & Capitán</p>
+        </div>
+        <div class="text-center">
+          <img src="fotos/7C0E4959-6344-42B6-AB5C-77F731D42A44_1_201_a.jpeg" alt="Wayne Mann" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg" />
+          <h4 class="text-xl font-semibold">Wayne Mann</h4>
+          <p class="text-gray-600">Capitán</p>
+        </div>
+        <div class="text-center">
+          <img src="fotos/chofer.jpeg" alt="Eliu" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg" />
+          <h4 class="text-xl font-semibold">Eliu</h4>
+          <p class="text-gray-600">Chofer</p>
+        </div>
+        <div class="text-center">
+          <img src="" alt="" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg" />
+          <h4 class="text-xl font-semibold">&nbsp;</h4>
+          <p class="text-gray-600">Encargados de sistemas y redes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestros Valores -->
+  <section class="py-16 px-6 md:px-20">
+    <div class="bg-blur">
+      <h2 class="text-3xl font-bold text-teal-700 mb-6 text-center">Nuestros Valores</h2>
+      <ul class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+        <li class="flex items-start">
+          <span class="text-teal-700 text-2xl mr-3">✔️</span>
+          <span>Seguridad: Prioridad en el bienestar de nuestros pasajeros y tripulación.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-700 text-2xl mr-3">✔️</span>
+          <span>Sostenibilidad: Prácticas responsables para proteger el medio ambiente.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-700 text-2xl mr-3">✔️</span>
+          <span>Excelencia: Compromiso con la calidad en cada detalle del tour.</span>
+        </li>
+        <li class="flex items-start">
+          <span class="text-teal-700 text-2xl mr-3">✔️</span>
+          <span>Hospitalidad: Atención cálida y personalizada para cada cliente.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-700 text-white text-center py-6 mt-12">
+    <p class="text-sm">&copy; 2025 Capt. Wayne Charters. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

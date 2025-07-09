@@ -1,0 +1,78 @@
+<!-- GALERÍA (Adaptado para todos los dispositivos) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería | Capt. Wayne Charters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-image: url('https://media.istockphoto.com/id/184600243/photo/coral-reef-roatan-honduras.jpg?s=612x612&w=0&k=20&c=-tvn8IxjLPQnW-NWD2cqKaR7ZXRY0X2OFh2cIvfiqh4=');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(3px);
+    }
+    .logo-text {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #facc15;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <div class="overlay min-h-screen">
+    <header class="absolute top-0 left-0 w-full z-50">
+      <nav class="flex flex-wrap justify-between items-center px-6 py-4 bg-gradient-to-b from-black/70 to-transparent text-white">
+        <div class="logo-text">Capt. Wayne Charters</div>
+        <ul class="hidden md:flex space-x-6 font-medium text-base items-center">
+          <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+          <li><a href="tours.html" class="hover:text-yellow-300 transition">Tours</a></li>
+          <li><a href="galeria.html" class="hover:text-yellow-300 transition">Galería</a></li>
+          <li><a href="mapa.html" class="hover:text-yellow-300 transition">Mapa</a></li>
+          <li><a href="sobrenosotros.html" class="hover:text-yellow-300 transition">Sobre Nosotros</a></li>
+          <li><a href="calendario.html" class="hover:text-yellow-300 transition">Calendario</a></li>
+          <li><a href="contacto.html" class="hover:text-yellow-300 transition">Contacto</a></li>
+          <li><a href="carrito.html" class="relative flex items-center hover:text-yellow-400 transition">🛒 <span class="ml-1">Carrito</span><span id="cart-count" class="ml-1 bg-yellow-400 text-xs text-black px-2 py-0.5 rounded-full">0</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bg-gradient-to-r from-teal-700 to-cyan-600 text-white py-16 text-center shadow-md mt-20">
+      <h1 class="text-4xl font-extrabold tracking-tight">Galería de Aventuras</h1>
+      <p class="text-lg mt-2 text-white/90 max-w-2xl mx-auto">Explora los paisajes submarinos y experiencias inolvidables de Roatán</p>
+    </section>
+
+    <section class="py-16 px-4 md:px-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Aquí van las imágenes -->
+        <!-- Imagen 1 -->
+        <img src="fotos/5F64C6D5-663A-4333-899A-21690FF3417B.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/7793E52B-2AD3-48BD-B402-16B27A0404D6.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+
+        <img src="fotos/61823F65-8896-4278-A88E-06DCDC7D1013.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/F5268652-BEAE-4075-AEB8-0A8C3A3FCCD3.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/E4703FB9-9C8C-467B-B5CF-1A7F861DC8A6.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/1.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/WhatsApp Image 2025-06-29 at 16.04.26.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/8.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        <img src="fotos/WhatsApp Image 2025-06-29 at 16.04.20.jpeg" class="rounded-lg shadow-md hover:scale-105 transition w-full h-auto object-cover">
+        
+
+      </div>
+    </section>
+
+    <footer class="bg-teal-700 text-white text-center py-6 mt-12">
+      <p class="text-sm">&copy; 2025 Capt. Wayne Charters. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!-- Código de la sección INICIO adaptado para dispositivos -->
+<!-- (Este ya fue entregado adaptado arriba, puedes pegarlo en un archivo llamado inicio.html) -->
+
+<!-- Código de la sección TOURS adaptado para dispositivos -->
+<!-- A continuación el código separado y adaptado solo para la sección TOURS -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora Tours | Capt. Wayne Charters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-image: url('https://westbaycolonial.com/wp-content/uploads/2018/11/West-Bay-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .tour-card:hover img {
+      transform: scale(1.05);
+    }
+    .tour-card img {
+      transition: transform 0.4s ease;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo-text {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #facc15;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    .bg-glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(5px);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <header class="absolute top-0 left-0 w-full z-50">
+    <nav class="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-gradient-to-b from-black/70 to-transparent text-white">
+      <div class="logo-text">Capt. Wayne Charters</div>
+      <ul class="hidden md:flex space-x-4 md:space-x-6 font-medium text-base items-center">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+        <li><a href="tours.html" class="hover:text-yellow-300 transition">Tours</a></li>
+        <li><a href="galeria.html" class="hover:text-yellow-300 transition">Galería</a></li>
+        <li><a href="mapa.html" class="hover:text-yellow-300 transition">Mapa</a></li>
+        <li><a href="sobrenosotros.html" class="hover:text-yellow-300 transition">Sobre Nosotros</a></li>
+        <li><a href="contacto.html" class="hover:text-yellow-300 transition">Contacto</a></li>
+        <li>
+          <a href="carrito.html" class="relative flex items-center hover:text-yellow-400 transition">
+            🛒 <span class="ml-1">Carrito</span>
+            <span id="cart-count" class="ml-1 bg-yellow-400 text-xs text-black px-2 py-0.5 rounded-full">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-teal-700 to-cyan-600 text-white py-20 px-4 md:px-6 text-center shadow-md mt-20">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Explora Nuestros Tours</h1>
+    <p class="text-lg md:text-xl mt-2 text-white/90">Aventuras inolvidables en tierra y mar con Capt. Wayne</p>
+  </header>
+
+  <!-- Grid de tours -->
+  <section class="py-16 px-4 md:px-20 fade-in">
+    <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-glass rounded-xl p-6">
+
+      <!-- Tour 1 -->
+      <div class="tour-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="fotos/WhatsApp Image 2025-06-29 at 16.04.20.jpeg" alt="Banana Boat" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-teal-700 mb-1">Banana Boat</h2>
+          <p class="text-gray-600 text-sm mb-2">Disfruta de una aventura llena de adrenalina sobre las olas en nuestro divertido paseo en Banana Boat, ideal para grupos y familias.</p>
+          <p class="text-lg font-semibold text-gray-800 mb-2">$40 USD</p>
+          <button data-id="1" class="details-btn bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition mb-2">Ver detalles</button>
+          <div id="details-1" class="mt-2 text-sm text-gray-700 hidden">
+            🚤 Adrenalina total en el mar Caribe.<br>⏱ 30 min<br>🛟 Incluye chaleco salvavidas y guía.
+          </div>
+          <button class="add-to-cart mt-4 bg-teal-700 text-white px-4 py-2 rounded-full font-semibold hover:bg-teal-600 transition w-full">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!-- Tour 2 -->
+      <div class="tour-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="fotos/8.jpeg" alt="Cayos Cochinos" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-teal-700 mb-1">Tour a Cayos Cochinos</h2>
+          <p class="text-gray-600 text-sm mb-2">Un paraíso de islas vírgenes. Incluye transporte, almuerzo y tiempo libre en la playa.</p>
+          <p class="text-lg font-semibold text-gray-800 mb-2">$85 USD</p>
+          <button data-id="2" class="details-btn bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition mb-2">Ver detalles</button>
+          <div id="details-2" class="mt-2 text-sm text-gray-700 hidden">
+            🏝 Viaje en lancha con snorkeling.<br>🍴 Almuerzo incluido<br>⏱ 6 horas de aventura.
+          </div>
+          <button class="add-to-cart mt-4 bg-teal-700 text-white px-4 py-2 rounded-full font-semibold hover:bg-teal-600 transition w-full">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!-- Tour 3 -->
+      <div class="tour-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="fotos/WhatsApp Image 2025-06-29 at 16.04.26.jpeg" alt="Pesca Deportiva" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-teal-700 mb-1">Pesca Deportiva</h2>
+          <p class="text-gray-600 text-sm mb-2">A bordo con Capt. Wayne, pesca el gran wahoo o mahi-mahi con los mejores equipos.</p>
+          <p class="text-lg font-semibold text-gray-800 mb-2">$120 USD</p>
+          <button data-id="3" class="details-btn bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300 transition mb-2">Ver detalles</button>
+          <div id="details-3" class="mt-2 text-sm text-gray-700 hidden">
+            🎣 Pesca profesional en alta mar.<br>🐟 Wahoo, Mahi-Mahi, Barracuda<br>⏱ 4 horas con snacks incluidos.
+          </div>
+          <button class="add-to-cart mt-4 bg-teal-700 text-white px-4 py-2 rounded-full font-semibold hover:bg-teal-600 transition w-full">Añadir al carrito</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script para mostrar detalles -->
+  <script>
+    document.querySelectorAll('.details-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const id = button.getAttribute('data-id');
+        const details = document.getElementById(`details-${id}`);
+        details.classList.toggle('hidden');
+      });
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Tour añadido al carrito. ¡Gracias por reservar con Capt. Wayne!');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Agenda de Capitanes - Julio 2025 | Capt. Wayne Charters</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-image: url('https://media.istockphoto.com/id/184600243/photo/coral-reef-roatan-honduras.jpg?s=612x612&w=0&k=20&c=-tvn8IxjLPQnW-NWD2cqKaR7ZXRY0X2OFh2cIvfiqh4=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #1f2937;
+  }
+
+  .logo-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #facc15;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+
+  .calendar-day:hover {
+    background-color: #ccfbf1;
+    cursor: pointer;
+  }
+
+  .content-bg {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .disabled-day {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  header nav {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    padding: 1rem 1.5rem;
+  }
+
+  header {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    z-index: 50;
+  }
+</style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<header>
+<nav class="flex flex-wrap justify-between items-center text-white">
+  <div class="logo-text">Capt. Wayne Charters</div>
+  <ul class="hidden md:flex space-x-6 font-medium text-base items-center">
+    <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
+    <li><a href="tours.html" class="hover:text-yellow-300 transition">Tours</a></li>
+    <li><a href="galeria.html" class="hover:text-yellow-300 transition">Galería</a></li>
+    <li><a href="mapa.html" class="hover:text-yellow-300 transition">Mapa</a></li>
+    <li><a href="sobrenosotros.html" class="hover:text-yellow-300 transition">Sobre Nosotros</a></li>
+    <li><a href="contacto.html" class="hover:text-yellow-300 transition">Contacto</a></li>
+    <li><a href="calendario.html" class="hover:text-yellow-300 transition">Calendario</a></li>
+    <li>
+      <a href="carrito.html" class="relative flex items-center hover:text-yellow-400 transition">
+        🛒 <span class="ml-1">Carrito</span>
+        <span id="cart-count" class="ml-1 bg-yellow-400 text-xs text-black px-2 py-0.5 rounded-full">0</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</header>
+
+<!-- Agenda de julio -->
+<section class="content-bg">
+  <h1 class="text-4xl font-bold text-center text-teal-700 mb-8">Agenda - Julio 2025</h1>
+
+  <!-- Calendario -->
+  <div class="bg-white rounded-3xl shadow-lg p-6 max-w-2xl mx-auto border">
+    <div class="grid grid-cols-7 gap-2 text-center font-semibold text-gray-600 mb-4">
+      <div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div>
+    </div>
+    <div class="grid grid-cols-7 gap-2 text-center text-sm" id="calendar-days">
+      <!-- Los días se generarán con JavaScript -->
+    </div>
+    <p class="text-sm mt-4 text-gray-500 text-center">Haz clic en un día para ver la disponibilidad</p>
+  </div>
+
+  <!-- Disponibilidad -->
+  <div id="disponibilidad" class="max-w-xl mx-auto mt-10 p-6 bg-white/80 border rounded-3xl shadow-md hidden backdrop-blur">
+    <h2 class="text-2xl font-semibold text-teal-700 mb-4" id="diaSeleccionado"></h2>
+    <div class="space-y-4">
+      <div>
+        <p class="font-medium text-gray-700">Capitán Wayne:</p>
+        <p class="text-sm text-gray-600">Disponible de <span class="text-green-600 font-semibold">08:00 AM</span> a <span class="text-green-600 font-semibold">04:00 PM</span></p>
+      </div>
+      <div>
+        <p class="font-medium text-gray-700">Capitán Carlos:</p>
+        <p class="text-sm text-gray-600">Disponible de <span class="text-green-600 font-semibold">10:00 AM</span> a <span class="text-green-600 font-semibold">05:00 PM</span></p>
+      </div>
+      <div>
+        <p class="font-medium text-gray-700">Eliu (Chofer):</p>
+        <p class="text-sm text-gray-600">Reservado en la mañana. Disponible de <span class="text-yellow-600 font-semibold">01:00 PM</span> a <span class="text-green-600 font-semibold">06:00 PM</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-teal-700 text-white text-center py-6 mt-16">
+  <p class="text-sm">&copy; 2025 Capt. Wayne Charters. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  function generarDiasJulio() {
+    const calendar = document.getElementById('calendar-days');
+    const today = new Date();
+    const currentDate = today.getDate();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+    const isBeforeJuly2025 = (currentYear < 2025 || (currentYear === 2025 && currentMonth < 6));
+    const isJuly2025 = currentYear === 2025 && currentMonth === 6;
+
+    const firstDay = new Date(2025, 6, 1).getDay(); // 0=Dom, 1=Lun...
+    const adjustedStart = (firstDay === 0) ? 6 : firstDay - 1;
+
+    for (let i = 0; i < adjustedStart; i++) {
+      const empty = document.createElement('div');
+      calendar.appendChild(empty);
+    }
+
+    for (let day = 1; day <= 31; day++) {
+      const dayEl = document.createElement('div');
+      dayEl.classList.add('calendar-day', 'bg-gray-50', 'p-3', 'rounded', 'shadow-sm');
+      dayEl.textContent = day;
+
+      if (!isBeforeJuly2025 && (currentYear > 2025 || currentMonth > 6 || day < currentDate)) {
+        dayEl.classList.add('disabled-day');
+      } else {
+        dayEl.onclick = () => seleccionarDia(day);
+      }
+      calendar.appendChild(dayEl);
+    }
+  }
+
+  function seleccionarDia(dia) {
+    const disponibilidad = document.getElementById('disponibilidad');
+    const titulo = document.getElementById('diaSeleccionado');
+    titulo.textContent = `Disponibilidad para el ${dia} de Julio de 2025`;
+    disponibilidad.classList.remove('hidden');
+    window.scrollTo({ top: disponibilidad.offsetTop - 100, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', generarDiasJulio);
+</script>
+
+</body>
+</html>
