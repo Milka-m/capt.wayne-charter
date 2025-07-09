@@ -24,12 +24,74 @@
     .fade-in-up {
       animation: fadeInUp 1.2s ease-out forwards;
     }
+
+    /* ESTILOS PARA EL MENU RESPONSIVE SIN JS */
+
+    /* Ocultar checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Estilos para el botón hamburguesa */
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+      color: white;
+    }
+
+    /* Para dispositivos móviles */
+    @media (max-width: 767px) {
+      /* Mostrar botón hamburguesa */
+      .menu-icon {
+        display: block;
+      }
+
+      /* Ocultar el menú por defecto */
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 60px; /* Ajustar si cambias la altura del header */
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 1rem 0;
+        border-top: 1px solid #facc15;
+        z-index: 9999;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+
+      /* Mostrar menú cuando checkbox está chequeado */
+      #menu-toggle:checked + label + nav ul {
+        display: flex;
+      }
+
+      /* Ajustes para los enlaces del menú */
+      nav ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+    }
   </style>
 </head>
 <body class="text-white scroll-smooth">
   <header class="absolute top-0 left-0 w-full z-50">
-    <nav class="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-gradient-to-b from-black/70 to-transparent text-white">
+    <nav class="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-gradient-to-b from-black/70 to-transparent text-white relative">
       <div class="logo-text">Capt. Wayne Charters</div>
+
+      <!-- Checkbox oculto -->
+      <input type="checkbox" id="menu-toggle" />
+
+      <!-- Label que actúa como botón hamburguesa -->
+      <label for="menu-toggle" class="menu-icon md:hidden">&#9776;</label>
+
       <ul class="hidden md:flex space-x-4 md:space-x-6 font-medium text-sm md:text-base items-center">
         <li><a href="index.html" class="hover:text-yellow-300 transition">Inicio</a></li>
         <li><a href="tours.html" class="hover:text-yellow-300 transition">Tours</a></li>
